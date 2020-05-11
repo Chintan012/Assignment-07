@@ -82,8 +82,8 @@ import Toast from './Toast.jsx';
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query, variables })
     }).then(response => {
-      this.loadData()
       this.productCount();
+      this.loadData()
     }).catch(err => {
       alert("Error in sending data to server: " + err.message);
     });
